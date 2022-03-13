@@ -8,6 +8,7 @@ import 'package:mobile_assignment/core/home/logic/cubit.dart';
 import 'package:mobile_assignment/core/home/logic/service.dart';
 import 'package:mobile_assignment/core/home/logic/states.dart';
 import 'package:mobile_assignment/core/home/models/vehicle.dart';
+import 'package:mobile_assignment/core/home/models/vehicle_search_result.dart';
 
 import 'constants/assets.dart';
 
@@ -19,36 +20,63 @@ void main() {
 
     await cubit.searchVehicles(make: 'acur');
 
-    expect(cubit.state.runtimeType, HomeDataState);
-    expect(
-      (cubit.state as HomeDataState).searchResult.medianPrice,
-      39616,
+    _expectSearchResult(
+      cubit.state,
+      const VehicleSearchResult(
+        lowestPrice: 39616,
+        highestPrice: 39616,
+        medianPrice: 39616,
+        numberOfVehicles: 29,
+      ),
     );
 
-    await cubit.searchVehicles(model: 'cx');
-
-    expect(cubit.state.runtimeType, HomeDataState);
-    expect(
-      (cubit.state as HomeDataState).searchResult.medianPrice,
-      56854,
+    await cubit.searchVehicles(model: 'Stelvio Quadrifoglio');
+    _expectSearchResult(
+      cubit.state,
+      const VehicleSearchResult(
+        lowestPrice: 5000,
+        highestPrice: 10000,
+        medianPrice: 7500,
+        numberOfVehicles: 20,
+      ),
     );
 
-    await cubit.searchVehicles(year: 2019);
+    await cubit.searchVehicles(year: 2022);
 
-    expect(cubit.state.runtimeType, HomeDataState);
-    expect(
-      (cubit.state as HomeDataState).searchResult.medianPrice,
-      7828,
+    _expectSearchResult(
+      cubit.state,
+      const VehicleSearchResult(
+        lowestPrice: 7828,
+        highestPrice: 7828,
+        medianPrice: 7828,
+        numberOfVehicles: 291,
+      ),
     );
 
-    await cubit.searchVehicles(budget: 5000);
+    await cubit.searchVehicles(budget: 4950);
 
-    expect(cubit.state.runtimeType, HomeDataState);
-    expect(
-      (cubit.state as HomeDataState).searchResult.medianPrice,
-      4765,
+    _expectSearchResult(
+      cubit.state,
+      const VehicleSearchResult(
+        lowestPrice: 4765,
+        highestPrice: 4765,
+        medianPrice: 4765,
+        numberOfVehicles: 276,
+      ),
     );
   });
+}
+
+void _expectSearchResult(
+  HomeState state,
+  VehicleSearchResult expectedResult,
+) {
+  expect(state.runtimeType, HomeDataState);
+
+  expect(
+    (state as HomeDataState).searchResult,
+    expectedResult,
+  );
 }
 
 class MockHomeService implements HomeService {

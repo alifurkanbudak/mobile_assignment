@@ -16,7 +16,7 @@
     {
         "make": "Hyundai",
         "model": "Elantra",
-        "year": 2019,
+        "year": 2022,
         "vehicle_count": 291,
         "price": 7828
     },
@@ -26,5 +26,19 @@
         "year": 2020,
         "vehicle_count": 276,
         "price": 4765
+    },
+    {
+        "make": "Alfa Romeo",
+        "model": "Stelvio Quadrifoglio",
+        "year": 2019,
+        "vehicle_count": 10,
+        "price": 10000
+    },
+    {
+        "make": "Alfa Romeo",
+        "model": "Stelvio Quadrifoglio",
+        "year": 2019,
+        "vehicle_count": 10,
+        "price": 5000
     }
 ]

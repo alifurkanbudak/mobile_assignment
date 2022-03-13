@@ -1,5 +1,7 @@
-class VehicleSearchResult {
-  VehicleSearchResult({
+import 'package:equatable/equatable.dart';
+
+class VehicleSearchResult extends Equatable {
+  const VehicleSearchResult({
     required this.lowestPrice,
     required this.highestPrice,
     required this.medianPrice,
@@ -17,4 +19,12 @@ class VehicleSearchResult {
         'median_price': medianPrice,
         'number_of_vehicles': numberOfVehicles,
       };
+
+  @override
+  List<Object?> get props => [
+        lowestPrice,
+        highestPrice,
+        medianPrice,
+        numberOfVehicles,
+      ];
 }

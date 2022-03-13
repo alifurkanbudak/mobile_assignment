@@ -125,13 +125,9 @@ class HomeCubit extends Cubit<HomeState> {
     final lowerQuery = query.toLowerCase();
 
     final res = vehicles.where(
-      (v) {
-        bool include = true;
-
-        include &= v.make.toLowerCase().contains(lowerQuery);
-
-        return include;
-      },
+      (v) =>
+          v.make.toLowerCase().contains(lowerQuery) ||
+          v.model.toLowerCase().contains(lowerQuery),
     );
 
     return res.toList();
@@ -139,7 +135,7 @@ class HomeCubit extends Cubit<HomeState> {
 
   VehicleSearchResult _getSearchResult(List<VehicleModel> vehicles) {
     if (vehicles.isEmpty) {
-      return VehicleSearchResult(
+      return const VehicleSearchResult(
         highestPrice: 0,
         lowestPrice: 0,
         medianPrice: 0,
@@ -147,21 +143,37 @@ class HomeCubit extends Cubit<HomeState> {
       );
     }
 
+    final numberOfVehicles =
+        vehicles.fold<int>(0, (prev, v) => prev += v.vehicleCount);
+
     return VehicleSearchResult(
       lowestPrice: vehicles[0].price,
       highestPrice: vehicles[vehicles.length - 1].price,
-      medianPrice: _calcMedianPrice(vehicles),
-      numberOfVehicles: vehicles.length,
+      medianPrice: _calcMedianPrice(vehicles, numberOfVehicles),
+      numberOfVehicles: numberOfVehicles,
     );
   }
 
-  double _calcMedianPrice(List<VehicleModel> vehicles) {
-    if (vehicles.length.isEven) {
-      return (vehicles[vehicles.length ~/ 2].price +
-              vehicles[vehicles.length ~/ 2 + 1].price) /
-          2;
-    } else {
-      return vehicles[vehicles.length ~/ 2].price.toDouble();
+  double _calcMedianPrice(List<VehicleModel> vehicles, int numberOfVehicles) {
+    final medianLen = numberOfVehicles ~/ 2;
+
+    int currSum = 0;
+
+    for (int i = 0; i < vehicles.length; i++) {
+      currSum += vehicles[i].vehicleCount;
+
+      if (currSum >= medianLen + 1) {
+        return vehicles[i].price.toDouble();
+      } else if (currSum == medianLen) {
+        if (numberOfVehicles.isOdd) {
+          return vehicles[i + 1].price.toDouble();
+        } else {
+          return (vehicles[i].price + vehicles[i + 1].price) / 2;
+        }
+      }
     }
+
+    // Shouldn't reach here
+    throw UnimplementedError();
   }
 }
