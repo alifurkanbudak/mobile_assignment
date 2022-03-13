@@ -1,6 +1,6 @@
-import 'package:engineering_exercise/common/extensions/color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:mobile_assignment/common/extensions/color.dart';
 
 class CustomThemeData {
   CustomThemeData({

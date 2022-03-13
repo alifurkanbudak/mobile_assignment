@@ -1,8 +1,8 @@
-import 'package:engineering_exercise/common/extensions/context.dart';
-import 'package:engineering_exercise/common/helpers/snack_bar.dart';
-import 'package:engineering_exercise/core/home/logic/cubit.dart';
-import 'package:engineering_exercise/core/vehicle_type_selection/page.dart';
 import 'package:flutter/material.dart';
+import 'package:mobile_assignment/common/extensions/context.dart';
+import 'package:mobile_assignment/common/helpers/snack_bar.dart';
+import 'package:mobile_assignment/core/home/logic/cubit.dart';
+import 'package:mobile_assignment/core/vehicle_type_selection/page.dart';
 import 'package:provider/provider.dart';
 
 import 'button.dart';

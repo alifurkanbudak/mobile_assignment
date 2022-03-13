@@ -1,9 +1,9 @@
-import 'package:engineering_exercise/common/extensions/context.dart';
-import 'package:engineering_exercise/core/home/page.dart';
-import 'package:engineering_exercise/core/tab_layout/models/tab_item.dart';
-import 'package:engineering_exercise/core/tab_layout/widgets/badge.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:mobile_assignment/common/extensions/context.dart';
+import 'package:mobile_assignment/core/home/page.dart';
+import 'package:mobile_assignment/core/tab_layout/models/tab_item.dart';
+import 'package:mobile_assignment/core/tab_layout/widgets/badge.dart';
 
 class TabLayoutPage extends StatefulWidget {
   const TabLayoutPage({Key? key}) : super(key: key);

@@ -1,8 +1,8 @@
 import 'package:either_dart/either.dart';
-import 'package:engineering_exercise/common/constants/assets.dart';
-import 'package:engineering_exercise/common/extensions/int.dart';
-import 'package:engineering_exercise/common/helpers/file.dart';
-import 'package:engineering_exercise/core/vehicle_type_selection/models/vehicle_type.dart';
+import 'package:mobile_assignment/common/constants/assets.dart';
+import 'package:mobile_assignment/common/extensions/int.dart';
+import 'package:mobile_assignment/common/helpers/file.dart';
+import 'package:mobile_assignment/core/vehicle_type_selection/models/vehicle_type.dart';
 
 class VehicleTypeSelectionService {
   Future<Either<Error, List<VehicleTypeModel>>> fetchVehicleTypes() async {

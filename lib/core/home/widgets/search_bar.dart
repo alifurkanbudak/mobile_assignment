@@ -1,5 +1,5 @@
-import 'package:engineering_exercise/common/extensions/context.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:mobile_assignment/common/extensions/context.dart';
 
 class HomeSearchBar extends StatelessWidget {
   const HomeSearchBar({

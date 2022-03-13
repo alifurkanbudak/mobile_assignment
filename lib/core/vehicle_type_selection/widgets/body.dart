@@ -1,9 +1,9 @@
-import 'package:engineering_exercise/core/vehicle_type_selection/logic/cubit.dart';
-import 'package:engineering_exercise/core/vehicle_type_selection/models/vehicle_type.dart';
-import 'package:engineering_exercise/core/vehicle_type_selection/widgets/item_grid.dart';
-import 'package:engineering_exercise/core/vehicle_type_selection/widgets/vehicle_type_item.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:mobile_assignment/core/vehicle_type_selection/logic/cubit.dart';
+import 'package:mobile_assignment/core/vehicle_type_selection/models/vehicle_type.dart';
+import 'package:mobile_assignment/core/vehicle_type_selection/widgets/item_grid.dart';
+import 'package:mobile_assignment/core/vehicle_type_selection/widgets/vehicle_type_item.dart';
 import 'package:provider/provider.dart';
 
 class VehicleTypeSelectionBody extends StatelessWidget {

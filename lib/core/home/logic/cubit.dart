@@ -1,8 +1,8 @@
-import 'package:engineering_exercise/core/home/logic/service.dart';
-import 'package:engineering_exercise/core/home/logic/states.dart';
-import 'package:engineering_exercise/core/home/models/vehicle.dart';
-import 'package:engineering_exercise/core/home/models/vehicle_search_result.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:mobile_assignment/core/home/logic/service.dart';
+import 'package:mobile_assignment/core/home/logic/states.dart';
+import 'package:mobile_assignment/core/home/models/vehicle.dart';
+import 'package:mobile_assignment/core/home/models/vehicle_search_result.dart';
 
 class HomeCubit extends Cubit<HomeState> {
   HomeCubit({
@@ -40,8 +40,11 @@ class HomeCubit extends Cubit<HomeState> {
 
         final searchRes = _getSearchResult(filteredVehicles);
 
-        // ignore: avoid_print
-        print(searchRes.toJson);
+        emit(
+          HomeDataState(
+            searchResult: searchRes,
+          ),
+        );
       },
     );
   }
@@ -105,8 +108,11 @@ class HomeCubit extends Cubit<HomeState> {
 
         final searchRes = _getSearchResult(filteredVehicles);
 
-        // ignore: avoid_print
-        print(searchRes.toJson);
+        emit(
+          HomeDataState(
+            searchResult: searchRes,
+          ),
+        );
       },
     );
   }

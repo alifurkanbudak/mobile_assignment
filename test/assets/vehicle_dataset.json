@@ -1,0 +1,30 @@
+[
+    {
+        "make": "Acura",
+        "model": "ILX",
+        "year": 2017,
+        "vehicle_count": 29,
+        "price": 39616
+    },
+    {
+        "make": "Mazda",
+        "model": "CX5",
+        "year": 2018,
+        "vehicle_count": 176,
+        "price": 56854
+    },
+    {
+        "make": "Hyundai",
+        "model": "Elantra",
+        "year": 2019,
+        "vehicle_count": 291,
+        "price": 7828
+    },
+    {
+        "make": "Toyota",
+        "model": "RAV4",
+        "year": 2020,
+        "vehicle_count": 276,
+        "price": 4765
+    }
+]

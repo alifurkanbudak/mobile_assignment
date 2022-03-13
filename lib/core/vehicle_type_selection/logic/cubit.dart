@@ -1,5 +1,5 @@
-import 'package:engineering_exercise/core/vehicle_type_selection/logic/states.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:mobile_assignment/core/vehicle_type_selection/logic/states.dart';
 
 import 'service.dart';
 

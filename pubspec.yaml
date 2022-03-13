@@ -1,4 +1,4 @@
-name: engineering_exercise
+name: mobile_assignment
 description: A new Flutter project.
 
 publish_to: 'none'
@@ -39,6 +39,7 @@ flutter:
 
   assets:
     - assets/
+    - test/assets/
 
   fonts:
     - family: Raleway

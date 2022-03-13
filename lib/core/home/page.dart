@@ -1,11 +1,11 @@
-import 'package:engineering_exercise/common/extensions/context.dart';
-import 'package:engineering_exercise/common/helpers/snack_bar.dart';
-import 'package:engineering_exercise/core/home/logic/cubit.dart';
-import 'package:engineering_exercise/core/home/logic/states.dart';
-import 'package:engineering_exercise/core/home/widgets/body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:mobile_assignment/common/extensions/context.dart';
+import 'package:mobile_assignment/common/helpers/snack_bar.dart';
+import 'package:mobile_assignment/core/home/logic/cubit.dart';
+import 'package:mobile_assignment/core/home/logic/states.dart';
+import 'package:mobile_assignment/core/home/widgets/body.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -30,7 +30,9 @@ class HomePage extends StatelessWidget {
   }
 
   void _listener(BuildContext context, HomeState state) {
-    if (state is HomeErrorState) {
+    if (state is HomeDataState) {
+      debugPrint(state.searchResult.toJson.toString());
+    } else if (state is HomeErrorState) {
       SnackBarHelper.showError(
         context,
         message: context.strings.errorGettingDeals,

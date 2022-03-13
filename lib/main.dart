@@ -1,9 +1,9 @@
-import 'package:engineering_exercise/common/cubits/theme_cubit.dart';
-import 'package:engineering_exercise/common/themes/dark_theme.dart';
-import 'package:engineering_exercise/core/tab_layout/tab_layout.page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:mobile_assignment/common/cubits/theme_cubit.dart';
+import 'package:mobile_assignment/common/themes/dark_theme.dart';
+import 'package:mobile_assignment/core/tab_layout/tab_layout.page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'common/themes/custom_theme_data.dart';
@@ -60,7 +60,7 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider<HomeCubit>(
           create: (_) => HomeCubit(
-            service: HomeService(),
+            service: HomeServiceImpl(),
           ),
         ),
       ];

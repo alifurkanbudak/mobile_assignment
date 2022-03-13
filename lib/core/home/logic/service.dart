@@ -1,11 +1,16 @@
 import 'package:either_dart/either.dart';
-import 'package:engineering_exercise/common/constants/assets.dart';
-import 'package:engineering_exercise/common/extensions/int.dart';
-import 'package:engineering_exercise/common/helpers/file.dart';
-import 'package:engineering_exercise/core/home/models/vehicle.dart';
 import 'package:flutter/foundation.dart';
+import 'package:mobile_assignment/common/constants/assets.dart';
+import 'package:mobile_assignment/common/extensions/int.dart';
+import 'package:mobile_assignment/common/helpers/file.dart';
+import 'package:mobile_assignment/core/home/models/vehicle.dart';
 
-class HomeService {
+abstract class HomeService {
+  Future<Either<Error, List<VehicleModel>>> getVehicles();
+}
+
+class HomeServiceImpl implements HomeService {
+  @override
   Future<Either<Error, List<VehicleModel>>> getVehicles() async {
     await 2.wait();
 

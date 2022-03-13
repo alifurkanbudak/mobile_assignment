@@ -1,4 +1,4 @@
-import 'package:engineering_exercise/common/themes/colors.dart';
+import 'package:mobile_assignment/common/themes/colors.dart';
 
 import 'custom_theme_data.dart';
 

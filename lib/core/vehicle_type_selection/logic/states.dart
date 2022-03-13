@@ -1,4 +1,4 @@
-import 'package:engineering_exercise/core/vehicle_type_selection/models/vehicle_type.dart';
+import 'package:mobile_assignment/core/vehicle_type_selection/models/vehicle_type.dart';
 
 class VehicleTypeSelectionState {}
 

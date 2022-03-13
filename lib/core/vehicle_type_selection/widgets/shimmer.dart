@@ -1,8 +1,8 @@
-import 'package:engineering_exercise/common/constants/assets.dart';
-import 'package:engineering_exercise/common/extensions/context.dart';
-import 'package:engineering_exercise/core/vehicle_type_selection/widgets/item_grid.dart';
-import 'package:engineering_exercise/core/vehicle_type_selection/widgets/vehicle_type_item.dart';
 import 'package:flutter/material.dart';
+import 'package:mobile_assignment/common/constants/assets.dart';
+import 'package:mobile_assignment/common/extensions/context.dart';
+import 'package:mobile_assignment/core/vehicle_type_selection/widgets/item_grid.dart';
+import 'package:mobile_assignment/core/vehicle_type_selection/widgets/vehicle_type_item.dart';
 import 'package:shimmer/shimmer.dart';
 
 class VehicleTypesShimmer extends StatelessWidget {
