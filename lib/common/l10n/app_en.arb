@@ -1,0 +1,9 @@
+{
+    "searchMakeAndModel": "SEARCH MAKE AND MODEL",
+    "searchByVehicleType": "SEARCH BY VEHICLE TYPE",
+    "seeDealsOfTheDay": "SEE DEALS OF THE DAY",
+    "vehicleType": "Vehicle Type",
+    "errorGettingVehicleTypes": "Sorry, we couldn't get vehicle types",
+    "errorGettingDeals": "Sorry, we couldn't get deals of the day",
+    "enterThreeChars": "Please enter at least 3 characters"
+}

@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Compact",
+        "imageUrl": "assets/dummy_car.png"
+    },
+    {
+        "name": "Minivan",
+        "imageUrl": "assets/dummy_car.png"
+    },
+    {
+        "name": "Convertible",
+        "imageUrl": "assets/dummy_car.png"
+    },
+    {
+        "name": "Sedan",
+        "imageUrl": "assets/dummy_car.png"
+    },
+    {
+        "name": "Coupe",
+        "imageUrl": "assets/dummy_car.png"
+    },
+    {
+        "name": "Small SUV",
+        "imageUrl": "assets/dummy_car.png"
+    },
+    {
+        "name": "Hatchback",
+        "imageUrl": "assets/dummy_car.png"
+    },
+    {
+        "name": "Sports",
+        "imageUrl": "assets/dummy_car.png"
+    },
+    {
+        "name": "Hybrid/Electric",
+        "imageUrl": "assets/dummy_car.png"
+    },
+    {
+        "name": "SUV",
+        "imageUrl": "assets/dummy_car.png"
+    },
+    {
+        "name": "Midsize",
+        "imageUrl": "assets/dummy_car.png"
+    },
+    {
+        "name": "Truck",
+        "imageUrl": "assets/dummy_car.png"
+    }
+]
